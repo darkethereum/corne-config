@@ -29,12 +29,12 @@
 		combo_reset_left {
 		    timeout-ms = <50>;
 		    key-positions = <5 17 29>;
-		    bindings = <&bootloader>;
+		    bindings = <&reset>;
 		};
 		combo_reset_right {
 		    timeout-ms = <50>;
 		    key-positions = <6 18 30>;
-		    bindings = <&bootloader>;
+		    bindings = <&reset>;
 		};
 		combo_bootloader_right {
 		    timeout-ms = <50>;
