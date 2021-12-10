@@ -8,48 +8,212 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEF 0
+#define LWR 1
+#define RSE 2
+#define ADJ 3
+
 / {
+	combos {
+		compatible = "zmk,combos";	
+		combo_reset {
+		    timeout-ms = <50>;
+		    key-positions = <0 12 24>;
+		    bindings = <&reset>;
+		};	
+		combo_btclr {
+		    timeout-ms = <50>;
+		    key-positions = <1 13 25>;
+		    bindings = <&bt BT_CLR>;
+		};
+		combo_tab {
+		    timeout-ms = <50>;
+		    key-positions = <0 1>;
+		    bindings = <&kp TAB>;
+		};	
+		combo_grave {
+		    timeout-ms = <50>;
+		    key-positions = <1 2>;
+		    bindings = <&kp GRAVE>;
+		};			
+		combo_lpar {
+		    timeout-ms = <37>;
+		    key-positions = <3 4>;
+		    bindings = <&kp LPAR>;
+		};
+		combo_rpar {
+		    timeout-ms = <50>;
+		    key-positions = <4 5>;
+		    bindings = <&kp RPAR>;
+		};		
+		combo_adj {
+		    timeout-ms = <50>;
+		    key-positions = <10 22 34>;
+		    bindings = <&to 2>;
+		};		
+		combo_rse {
+		    timeout-ms = <50>;
+		    key-positions = <11 23 35>;
+		    bindings = <&to 3>;
+		};	
+		combo_lbrc {
+		    timeout-ms = <50>;
+		    key-positions = <15 16>;
+		    bindings = <&kp LBRC>;
+		};	
+		combo_rbrc {
+		    timeout-ms = <50>;
+		    key-positions = <16 17>;
+		    bindings = <&kp RBRC>;
+		};
+		combo_ctrl_c {
+		    timeout-ms = <50>;
+		    key-positions = <25 26 27>;
+		    bindings = <&kp LC(C)>;
+		};
+		combo_lbkt {
+		    timeout-ms = <50>;
+		    key-positions = <27 28>;
+		    bindings = <&kp LBKT>;
+		};
+		combo_rbkt {
+		    timeout-ms = <50>;
+		    key-positions = <28 29>;
+		    bindings = <&kp RBKT>;
+		};		
+		combo_page_down {
+		    timeout-ms = <50>;
+		    key-positions = <6 7>;
+		    bindings = <&kp PG_DN>;
+		};		
+		combo_page_up {
+		    timeout-ms = <50>;
+		    key-positions = <8 9>;
+		    bindings = <&kp PG_UP>;
+		};
+		combo_up {
+		    timeout-ms = <50>;
+		    key-positions = <7 8>;
+		    bindings = <&kp UP>;
+		};
+		combo_down {
+		    timeout-ms = <50>;
+		    key-positions = <19 20>;
+		    bindings = <&kp DOWN>;
+		};
+		combo_left {
+		    timeout-ms = <50>;
+		    key-positions = <18 19>;
+		    bindings = <&kp LEFT>;
+		};
+		combo_right {
+		    timeout-ms = <50>;
+		    key-positions = <20 21>;
+		    bindings = <&kp RIGHT>;
+		};			
+		combo_plus {
+		    timeout-ms = <50>;
+		    key-positions = <31 32>;
+		    bindings = <&kp KP_PLUS>;
+		};
+		combo_under {
+		    timeout-ms = <50>;
+		    key-positions = <32 33>;
+		    bindings = <&kp UNDER>;
+		};			
+		combo_dqt {
+		    timeout-ms = <50>;
+		    key-positions = <33 34>;
+		    bindings = <&kp DQT>;
+		};
+		combo_sqt {
+		    timeout-ms = <50>;
+		    key-positions = <34 35>;
+		    bindings = <&kp SQT>;
+		};
+		combo_bslh {
+		    timeout-ms = <50>;
+		    key-positions = <9 10>;
+		    bindings = <&kp BSLH>;
+		};
+		combo_volup {
+		    timeout-ms = <50>;
+		    key-positions = <10 11>;
+		    bindings = <&kp C_VOL_UP>;
+		};
+		combo_voldown {
+		    timeout-ms = <50>;
+		    key-positions = <22 23>;
+		    bindings = <&kp C_VOL_DN>;
+		};
+		combo_mute {
+		    timeout-ms = <50>;
+		    key-positions = <34 35>;
+		    bindings = <&kp C_MUTE>;
+		};		
+		combo_cmd_space {
+		    timeout-ms = <50>;
+		    key-positions = <36 37>;
+		    bindings = <&kp LG(SPACE)>;
+		};
+	};
+        
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// ------------------------------------------------------------------------------------------------------------------------------------
+//       | ALT/ESC    |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |  U   |  I  |  O  |  P  | BSPC  |
+//       | SHIFT/CAPS |  A  |  S  |  D  |  F  |  G  |                 |  H  |  J   |  K  |  L  |  ;  | ENTER |
+//       | CMD        |  Z  |  X  |  C  |  V  |  B  |                 |  N  |  M   |  ,  |  .  |  /  | CTRL  |
+//                    | RSE/TAB | LWR/SPC | ADJ/DEL |                 |    ADJ/=   |  LWR/BKSP |    RSE/-    |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+       &mt LALT ESC   &kp Q &kp W &kp E &kp R &kp T                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC 
+       &mt LSHFT CAPS &kp A &kp S &kp D &kp F &kp G                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
+       &kp LWIN       &kp Z &kp X &kp C &kp V &kp B                  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LCTRL
+       &lt RSE TAB    &lt LWR SPACE     &lt ADJ DEL                  &lt ADJ EQUAL          &lt LWR BSPC     &lt RSE MINUS
                         >;
                 };
+                
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// ------------------------------------------------------------------------------------------------------------------------------------
+//       | DEF |  !  |  @  |  #  |  $  |  %  |                            |  |  |  &  |  *  |  (  |  )  |     |
+//       |     |  1  |  2  |  3  |  4  |  5  |                            |  6  |  7  |  8  |  9  |  0  |     |
+//       |     |  F1 |  F2 |  F3 |  F4 |  F5 |                            |  F6 |  F7 |  F8 |  F9 | F10 | F12 |
+//                         |     |     |     |                            |     |     |     |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+          &to 0  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT              &kp PIPE &kp AMPS &kp STAR &kp LPAR &kp RPAR &trans  
+          &trans &kp N1   &kp N2 &kp N3   &kp N4   &kp N5                 &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &trans
+          &trans &kp F1   &kp F2 &kp F3   &kp F4   &kp F5                 &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &kp F12
+          &trans &trans   &trans                                                  &trans    &trans &trans
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// ------------------------------------------------------------------------------------------------------------------------------------
+//       |  DEF |     |     |     |     |     |                       |     |  7  |  8  |  9  |     | DEF |
+//       |      |     |     |     |     |     |                       |     |  4  |  5  |  6  |     |     |
+//       |      |     |     |     |     |     |                       |     |  1  |  2  |  3  |     |     |
+//                          |     |     |     |                       |     |  0  |  0  |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+          &to 0  &trans &trans &trans &trans &trans                   &trans &kp N7 &kp N8 &kp N9 &trans &to 0 
+          &trans &trans &trans &trans &trans  &trans                  &trans &kp N4 &kp N5 &kp N6 &trans &trans
+          &trans &trans &trans &trans &trans &trans                   &trans &kp N1 &kp N2 &kp N3 &trans &trans
+          &trans &trans &trans                                        &trans &kp N0 &kp N0
+                        >;
+                };
+                
+                adjust_layer {
+// ------------------------------------------------------------------------------------------------------------------------------------
+//       | DEF |     |     |       |           |     |                   |       | VOL_DN| VOL_UP|             |     | DEF |
+//       |     |     |     |       |           |     |                   | LEFT  | DOWN  |   UP  |    RIGHT    |     |     |
+//       |     |     |     | CMD+V | CMD+ALT+V |     |                   | CMD+W | PG_DN | PG_UP | CMD+SHIFT+T |     |     |
+//                         |       |           |     |                   |       |LWR/SPC|       |
+                        bindings = <
+          &to 0  &trans &trans &trans    &trans        &trans             &trans    &kp C_VOL_DN  &kp C_VOL_UP &trans        &trans &to 0  
+          &trans &trans &trans &trans    &trans        &trans             &kp LEFT  &kp DOWN      &kp UP       &kp RIGHT     &trans &trans
+          &trans &trans &trans &kp LG(C) &kp LG(LA(V)) &trans             &kp LG(W) &kp PG_DN     &kp PG_UP    &kp LG(LS(T)) &trans &trans
+          &trans &trans &trans                                            &trans    &lt LWR SPACE &trans
                         >;
                 };
         };
