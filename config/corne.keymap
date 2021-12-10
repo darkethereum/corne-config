@@ -26,6 +26,16 @@
 		    key-positions = <1 13 25>;
 		    bindings = <&bt BT_CLR>;
 		};
+		combo_bootloader_left {
+		    timeout-ms = <50>;
+		    key-positions = <5 17 29>;
+		    bindings = <&bootloader>;
+		};
+		combo_bootloader_right {
+		    timeout-ms = <50>;
+		    key-positions = <6 18 30>;
+		    bindings = <&bootloader>;
+		};	
 		combo_adj {
 		    timeout-ms = <50>;
 		    key-positions = <10 22 34>;
