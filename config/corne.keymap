@@ -203,22 +203,8 @@
           &trans &trans   &trans                                          &trans   &trans &trans
                         >;
                 };
-
-                raise_layer {
-// ------------------------------------------------------------------------------------------------------------------------------------
-//       |  DEF |     |     |     |     |     |                       |     |  7  |  8  |  9  |     | DEF |
-//       |      |     |     |     |     |     |                       |     |  4  |  5  |  6  |     |     |
-//       |      |     |     |     |     |     |                       |     |  1  |  2  |  3  |     |     |
-//                          |     |     |     |                       |     |  0  |  0  |
-                        bindings = <
-          &to 0  &trans &trans &trans &trans &trans                   &trans &kp N7 &kp N8 &kp N9 &trans &to 0 
-          &trans &trans &trans &trans &trans  &trans                  &trans &kp N4 &kp N5 &kp N6 &trans &trans
-          &trans &trans &trans &trans &trans &trans                   &trans &kp N1 &kp N2 &kp N3 &trans &trans
-          &trans &trans &trans                                        &trans &kp N0 &kp N0
-                        >;
-                };
                 
-                adjust_layer {
+                raise_layer {
 // ------------------------------------------------------------------------------------------------------------------------------------
 //       | DEF |     |     |       |           |     |                   |       | VOL_DN| VOL_UP|             |     | DEF |
 //       |     |     |     |       |           |     |                   | LEFT  | DOWN  |   UP  |    RIGHT    |     |     |
@@ -229,6 +215,22 @@
           &trans &trans &trans &trans    &trans        &trans             &kp LEFT  &kp DOWN      &kp UP       &kp RIGHT     &trans &trans
           &trans &trans &trans &kp LG(C) &kp LG(LA(V)) &trans             &kp LG(W) &kp PG_DN     &kp PG_UP    &kp LG(LS(T)) &trans &trans
           &trans &trans &trans                                            &trans    &lt LWR SPACE &trans
+                        >;
+                };
+		
+		
+
+                adjust_layer {
+// ------------------------------------------------------------------------------------------------------------------------------------
+//       |  DEF |     |     |     |     |     |                       |     |  7  |  8  |  9  |     | DEF |
+//       |      |     |     |     |     |     |                       |     |  4  |  5  |  6  |     |     |
+//       |      |     |     |     |     |     |                       |     |  1  |  2  |  3  |     |     |
+//                          |     |     |     |                       |     |  0  |  0  |
+                        bindings = <
+          &to 0  &trans &trans &trans &trans &trans                   &trans &kp N7 &kp N8 &kp N9 &trans &to 0 
+          &trans &trans &trans &trans &trans  &trans                  &trans &kp N4 &kp N5 &kp N6 &trans &trans
+          &trans &trans &trans &trans &trans &trans                   &trans &kp N1 &kp N2 &kp N3 &trans &trans
+          &trans &trans &trans                                        &trans &kp N0 &kp N0
                         >;
                 };
         };
