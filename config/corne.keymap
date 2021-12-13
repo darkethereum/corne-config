@@ -62,7 +62,7 @@
 		    bindings = <&kp GRAVE>;
 		};			
 		combo_lpar {
-		    timeout-ms = <10>;
+		    timeout-ms = <37>;
 		    key-positions = <3 4>;
 		    bindings = <&kp LPAR>;
 		};
@@ -107,7 +107,7 @@
 		    bindings = <&kp PG_UP>;
 		};
 		combo_up {
-		    timeout-ms = <10>;
+		    timeout-ms = <37>;
 		    key-positions = <7 8>;
 		    bindings = <&kp UP>;
 		};
