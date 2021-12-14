@@ -126,20 +126,20 @@
 		    key-positions = <20 21>;
 		    bindings = <&kp RIGHT>;
 		};			
-		combo_plus {
+		combo_dqt {
 		    timeout-ms = <50>;
 		    key-positions = <30 31>;
-		    bindings = <&kp KP_PLUS>;
-		};
+		    bindings = <&kp DQT>;
+		};	
 		combo_under {
 		    timeout-ms = <50>;
 		    key-positions = <31 32>;
 		    bindings = <&kp UNDER>;
-		};			
-		combo_dqt {
+		};		
+		combo_plus {
 		    timeout-ms = <50>;
 		    key-positions = <32 33>;
-		    bindings = <&kp DQT>;
+		    bindings = <&kp KP_PLUS>;
 		};
 		combo_sqt {
 		    timeout-ms = <50>;
