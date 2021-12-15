@@ -214,21 +214,21 @@
           &to 0  &trans &trans &trans    &trans        &trans             &trans    &kp C_VOL_DN  &kp C_VOL_UP &trans        &trans &to 0  
           &trans &trans &trans &trans    &trans        &trans             &kp LEFT  &kp DOWN      &kp UP       &kp RIGHT     &trans &trans
           &trans &trans &trans &kp LG(C) &kp LG(LA(V)) &trans             &kp LG(W) &kp PG_DN     &kp PG_UP    &kp LG(LS(T)) &trans &trans
-          &trans &trans &trans                                            &trans    &lt LWR SPACE &trans
+          &trans &trans &trans                                            &trans    &mo SYSTEM &trans
                         >;
                 };
 		
                 system_layer {
 // ------------------------------------------------------------------------------------------------------------------------------------
-//       |  DEF |     |     |     |     |     |                       |     |  7  |  8  |  9  |     | DEF |
-//       |      |     |     |     |     |     |                       |     |  4  |  5  |  6  |     |     |
-//       |      |     |     |     |     |     |                       |     |  1  |  2  |  3  |     |     |
-//                          |     |     |     |                       |     |  0  |  0  |
+//       |  RST |     |     |     |     | BLDR|                       |     |     |     |     |     |     |
+//       | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |                       |     |     |     |     |     |     |
+//       |      |     |     |     |     |     |                       |     |     |     |     |     |     |
+//                          |     |     |     |                       |     |     |     |
                         bindings = <
-          &to 0  &trans &trans &trans &trans &trans                   &trans &trans &trans &trans &trans &trans
-          &trans &trans &trans &trans &trans &trans                   &trans &trans &trans &trans &trans &trans
-          &trans &trans &trans &trans &trans &trans                   &trans &trans &trans &trans &trans &trans
-          &trans &trans &trans                                        &trans &trans &trans
+          &reset     &trans       &trans       &trans       &trans       &bootloader                    &trans &trans &trans &trans &trans &trans
+          &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                   &trans &trans &trans &trans &trans &trans
+          &trans     &trans       &trans       &trans       &trans       &trans                         &trans &trans &trans &trans &trans &trans
+          &trans     &trans       &trans                                                                &trans &trans &trans
                         >;
                 };
 			
