@@ -12,6 +12,7 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define SYSTEM 4
 
 / {
 	combos {
@@ -214,6 +215,20 @@
           &trans &trans &trans &trans    &trans        &trans             &kp LEFT  &kp DOWN      &kp UP       &kp RIGHT     &trans &trans
           &trans &trans &trans &kp LG(C) &kp LG(LA(V)) &trans             &kp LG(W) &kp PG_DN     &kp PG_UP    &kp LG(LS(T)) &trans &trans
           &trans &trans &trans                                            &trans    &lt LWR SPACE &trans
+                        >;
+                };
+		
+                system_layer {
+// ------------------------------------------------------------------------------------------------------------------------------------
+//       |  DEF |     |     |     |     |     |                       |     |  7  |  8  |  9  |     | DEF |
+//       |      |     |     |     |     |     |                       |     |  4  |  5  |  6  |     |     |
+//       |      |     |     |     |     |     |                       |     |  1  |  2  |  3  |     |     |
+//                          |     |     |     |                       |     |  0  |  0  |
+                        bindings = <
+          &to 0  &trans &trans &trans &trans &trans                   &trans &trans &trans &trans &trans &trans
+          &trans &trans &trans &trans &trans &trans                   &trans &trans &trans &trans &trans &trans
+          &trans &trans &trans &trans &trans &trans                   &trans &trans &trans &trans &trans &trans
+          &trans &trans &trans                                        &trans &trans &trans
                         >;
                 };
 			
