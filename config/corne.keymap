@@ -100,22 +100,22 @@
 		    timeout-ms = <50>;
 		    key-positions = <28 29>;
 		    bindings = <&kp RBKT>;
-		};	
-		combo_sqt {
+		};		
+		combo_plus {
 		    timeout-ms = <50>;
 		    key-positions = <30 31>;
-		    bindings = <&kp SQT>;
-		};						
+		    bindings = <&kp KP_PLUS>;
+		};					
 		combo_dqt {
 		    timeout-ms = <50>;
 		    key-positions = <31 32>;
 		    bindings = <&kp DQT>;
-		};		
-		combo_plus {
+		};	
+		combo_sqt {
 		    timeout-ms = <50>;
 		    key-positions = <32 33>;
-		    bindings = <&kp KP_PLUS>;
-		};
+		    bindings = <&kp SQT>;
+		};	
 		combo_bslh {
 		    timeout-ms = <50>;
 		    key-positions = <9 10 11>;
