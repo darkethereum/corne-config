@@ -21,6 +21,21 @@
 		    key-positions = <0 12 24>;
 		    bindings = <&bt BT_CLR>;
 		};
+		combo_btsel0 {
+		    timeout-ms = <50>;
+		    key-positions = <1 13 25>;
+		    bindings = <&bt BT_SEL 0>;
+		};
+		combo_btsel1 {
+		    timeout-ms = <50>;
+		    key-positions = <2 14 26>;
+		    bindings = <&bt BT_SEL 1>;
+		};
+		combo_btsel2 {
+		    timeout-ms = <50>;
+		    key-positions = <3 15 27>;
+		    bindings = <&bt BT_SEL 2>;
+		};
 		combo_reset_left {
 		    timeout-ms = <50>;
 		    key-positions = <5 17 29>;
