@@ -89,7 +89,7 @@
 		combo_arrow {
 		    timeout-ms = <50>;
 		    key-positions = <19 20>;
-		    bindings = <&kp LPAR>, <&kp RPAR>, <&kp KP_EQUAL>;, <&kp GT>;
+		    bindings = <&kp LPAR>, <&kp RPAR>, <&kp KP_EQUAL>, <&kp GT>;
 		};
 		combo_under {
 		    timeout-ms = <50>;
