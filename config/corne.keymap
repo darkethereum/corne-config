@@ -177,7 +177,7 @@
 //       | ALT/ESC    |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |  U   |  I  |  O  |  P  | BSPC  |
 //       | SHIFT/CAPS |  A  |  S  |  D  |  F  |  G  |                 |  H  |  J   |  K  |  L  |  ;  | ENTER |
 //       | CMD        |  Z  |  X  |  C  |  V  |  B  |                 |  N  |  M   |  ,  |  .  |  /  | CTRL  |
-//                    | RSE/TAB | LWR/SPC | ADJ/DEL |                 |    ADJ/=   |  LWR/BKSP |    RSE/-    |
+//                    | RSE/TAB | LWR/SPC | ADJ/DEL |                 |    ADJ/=   |    BKSP   |    RSE/-    |
                         bindings = <
           &mt LALT ESC   &kp Q &kp W &kp E &kp R &kp T                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC 
           &mt LSHFT CAPS &kp A &kp S &kp D &kp F &kp G                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
