@@ -14,21 +14,16 @@
 #define ADJ 3
 
 
-// Macros 
 / {
-    macros {
-        
+       macros {        
 		ZMK_MACRO(macro_arrow,
 			wait-ms = <30>;
 			tap-ms = <40>;
 			bindings = <&kp LPAR &kp RPAR &kp KP_EQUAL &kp GT>;
     			)
 
-    };
-};
-
-
-/ {
+       };
+    
 	combos {
 		compatible = "zmk,combos";	
 		combo_btsel0 {
