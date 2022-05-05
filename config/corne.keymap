@@ -216,15 +216,15 @@
 		
                 adjust_layer {
 // ------------------------------------------------------------------------------------------------------------------------------------
-//       | DEF |     |     |       |           |     |                   |       |       |       |             |     | DEF |
-//       |     |     |     |       |           |     |                   | LEFT  | DOWN  |   UP  |    RIGHT    |     |     |
-//       |     |     |     | CMD+V | CMD+ALT+V |     |                   | CMD+W | PG_DN | PG_UP | CMD+SHIFT+T |     |     |
-//                         |       |           |     |                   |       |       |       |
+//       | DEF |     |     |       |           |     |                   |      |       |       |       |     | DEF |
+//       |     |     |     |       |           |     |                   | LEFT | DOWN  |   UP  | RIGHT |     |     |
+//       |     |     |     | CMD+V | CMD+ALT+V |     |                   |      | PG_DN | PG_UP |       |     |     |
+//                         |       |           |     |                   |      |       |       |
                         bindings = <
-          &to 0  &trans &trans &trans    &trans        &trans             &trans    &trans     &trans    &trans        &trans &to 0  
-          &trans &trans &trans &trans    &trans        &trans             &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT     &trans &trans
-          &trans &trans &trans &kp LG(C) &kp LG(LA(V)) &trans             &kp LG(W) &kp PG_DN  &kp PG_UP &kp LG(LS(T)) &trans &trans
-          &trans &trans &trans                                            &trans    &trans &trans
+          &to 0  &trans &trans &trans    &trans        &trans             &trans   &trans    &trans    &trans    &trans &to 0  
+          &trans &trans &trans &trans    &trans        &trans             &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
+          &trans &trans &trans &kp LG(C) &kp LG(LA(V)) &trans             &trans   &kp PG_DN &kp PG_UP &trans    &trans &trans
+          &trans &trans &trans                                            &trans   &trans    &trans
                         >;
                 };
 	};
