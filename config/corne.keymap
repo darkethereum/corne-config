@@ -174,15 +174,15 @@
 
                 default_layer {
 // ------------------------------------------------------------------------------------------------------------------------------------
-//       | ALT/ESC    |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |  U   |  I  |  O  |  P  | BSPC  |
-//       | SHIFT/CAPS |  A  |  S  |  D  |  F  |  G  |                 |  H  |  J   |  K  |  L  |  ;  | ENTER |
-//       | CMD        |  Z  |  X  |  C  |  V  |  B  |                 |  N  |  M   |  ,  |  .  |  /  | CTRL  |
-//                    | RSE/TAB | LWR/SPC | ADJ/DEL |                 |    ADJ/=   |    BKSP   |    RSE/-    |
+//       | ALT/ESC |  Q  |  W  |  E  |  R  |  T  |                 |  Y  |  U   |  I  |  O  |  P  | BSPC  |
+//       | SHIFT   |  A  |  S  |  D  |  F  |  G  |                 |  H  |  J   |  K  |  L  |  ;  | ENTER |
+//       | CMD     |  Z  |  X  |  C  |  V  |  B  |                 |  N  |  M   |  ,  |  .  |  /  | CTRL  |
+//                 |   CAPS  | LWR/SPC | ADJ/DEL |                 |    ADJ/=   |    BKSP   |    RSE/-    |
                         bindings = <
-          &mt LALT ESC   &kp Q &kp W &kp E &kp R &kp T                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC 
-          &kp LSHFT  &kp A &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
-          &kp LWIN       &kp Z &kp X &kp C &kp V &kp B                &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LCTRL
-          &kp CAPS    &lt LWR SPACE     &lt ADJ DEL                &lt ADJ EQUAL          &kp BSPC     &lt RSE MINUS
+          &mt LALT ESC &kp Q &kp W &kp E &kp R &kp T                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC 
+          &kp LSHFT    &kp A &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
+          &kp LWIN     &kp Z &kp X &kp C &kp V &kp B                &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LCTRL
+          &kp CAPS     &lt LWR SPACE     &lt ADJ DEL                &lt ADJ EQUAL          &kp BSPC     &lt RSE MINUS
                         >;
                 };
                 
@@ -216,15 +216,15 @@
 		
                 adjust_layer {
 // ------------------------------------------------------------------------------------------------------------------------------------
-//       | DEF |     |     |       |           |     |                   |       | VOL_DN| VOL_UP|             |     | DEF |
-//       |     |     |     |       |           |     |                   | LEFT  | DOWN  |   UP  |    RIGHT    |     |     |
-//       |     |     |     | CMD+V | CMD+ALT+V |     |                   | CMD+W | PG_DN | PG_UP | CMD+SHIFT+T |     |     |
-//                         |       |           |     |                   |       |       |       |
+//       | DEF |     |     |       |           |     |                   |      |       |       |       |     | DEF |
+//       |     |     |     |       |           |     |                   | LEFT | DOWN  |   UP  | RIGHT |     |     |
+//       |     |     |     | CMD+V | CMD+ALT+V |     |                   |      | PG_DN | PG_UP |       |     |     |
+//                         |       |           |     |                   |      |       |       |
                         bindings = <
-          &to 0  &trans &trans &trans    &trans        &trans             &trans    &kp C_VOL_DN  &kp C_VOL_UP &trans        &trans &to 0  
-          &trans &trans &trans &trans    &trans        &trans             &kp LEFT  &kp DOWN      &kp UP       &kp RIGHT     &trans &trans
-          &trans &trans &trans &kp LG(C) &kp LG(LA(V)) &trans             &kp LG(W) &kp PG_DN     &kp PG_UP    &kp LG(LS(T)) &trans &trans
-          &trans &trans &trans                                            &trans    &trans &trans
+          &to 0  &trans &trans &trans    &trans        &trans             &trans   &trans    &trans    &trans    &trans &to 0  
+          &trans &trans &trans &trans    &trans        &trans             &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
+          &trans &trans &trans &kp LG(C) &kp LG(LA(V)) &trans             &trans   &kp PG_DN &kp PG_UP &trans    &trans &trans
+          &trans &trans &trans                                            &trans   &trans    &trans
                         >;
                 };
 	};
